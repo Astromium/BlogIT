@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="blogs-style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blogs</title>
+  </head>
+  <body>
+    <div class="blog" id="jiw">
+      <div class="img">
+        <img src="safe_image.png" alt="" />
+      </div>
+      <div class="content">
+        <div class="wrapper">
+          <p>
+            <b>Javascript is weird</b>. Don’t believe me? Try converting an
+            array of strings into integers using map and parseInt. Fire up your
+            console (F12 on Chrome), paste in the following, and press enter.
+          </p>
+          <br />
+          <p>Convinsed now ? So lets try and analyse this step by step.</p>
+          <h1>parseInt( ) :</h1>
+          <p>
+            <b>ParseInt</b> takes two arguments: <i>string</i> and <i>radix</i>.
+            If the radix provided is falsy, then by default, radix is set to 10.
+          </p>
+          <div class="snippet">
+            <p>parseInt('11'); &nbsp;&nbsp;&nbsp; => 11</p>
+            <p>parseInt('11', 2); &nbsp;&nbsp;&nbsp;=> 3</p>
+            <p>parseInt('11', 16); &nbsp;&nbsp;&nbsp;=> 17</p>
+            <br />
+            <p>
+              parseInt('11', undefined); &nbsp;&nbsp;&nbsp; => 11 (radix is
+              falsy)
+            </p>
+            <p>parseInt('11', 0); &nbsp;&nbsp;&nbsp;=> 11 (radix is falsy)</p>
+          </div>
+          <h1>map( ) :</h1>
+          <p>
+            We’re almost there!
+            <br />
+            Map is a method in the Array prototype that returns a new array of
+            the results of passing each element of the original array into a
+            function. For example, the following code multiplies each element in
+            the array by 3:
+          </p>
+          <div class="img-container">
+            <img src="map-snippet.png" alt="" height="250px" width="600px" />
+          </div>
+          <p>
+            Now, let’s say I want to log each element using <b>map( )</b> (with
+            no return statements). I should be able to pass
+            <b>console.log</b> as an argument into map( )… right?
+            <br />
+            <b>[1, 2, 3, 4, 5].map(console.log)</b>
+          </p>
+          <div class="img-container">
+            <img src="map-log.png" alt="" width="600px" height="300px" />
+          </div>
+          <p>
+            Something very strange is going on. Instead of logging just the
+            value, each <b>console.log</b> call also logged the index and full
+            array.
+            <br />
+            When a function is passed into <b>map( )</b>, for each iteration,
+            three arguments are passed into the function: <b>currentValue</b>,
+            <b>currentIndex</b>, and the <b>full array</b>. That is why three
+            entries are logged for each iteration.
+          </p>
+          <br />
+          <p>We now have all the pieces we need to solve this mystery.</p>
+          <h1>Bringing it all together :</h1>
+          <p>Now let's run our example step by step</p>
+          <div class="snippet">
+            <p>['1', '7', '11'].map(parseInt) &nbsp;&nbsp; => [1, NaN, 3]</p>
+            <p>// First Iteration</p>
+            <p>parseInt('1', 0, ['1', '7', '11']); &nbsp; => 1</p>
+          </div>
+          <p>
+            Since 0 is falsy, the radix is set to the default value 10.
+            <b>parseInt( )</b> only takes two arguments, so the third argument
+            ['1', '7', '11'] is ignored. The string '1' in radix 10 refers to
+            the number 1.
+          </p>
+          <div class="snippet">
+            <p>// Second Iteration</p>
+            <p>parseInt('7', 1, ['1', '7', '11'] &nbsp;&nbsp; => NaN)</p>
+          </div>
+          <p>
+            In a radix 1 system, the symbol <b>'7'</b> does not exist. As with
+            the first iteration, the last argument is ignored. So,
+            <b>parseInt( )</b> returns <b>NaN</b>.
+          </p>
+          <div class="snippet">
+            <p>// Third iteration</p>
+            <p>parseInt('11', 2, ['1', '7', '11'] &nbsp;&nbsp; => 3)</p>
+          </div>
+          <p>
+            In a radix <b>2</b> (binary) system, the symbol <b>'11'</b> refers
+            to the number <b>3</b>. The last argument is ignored.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

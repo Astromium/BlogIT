@@ -108,6 +108,7 @@ html body .blogs-container a {
   text-decoration: none;
   padding: 0.5rem;
   border-radius: 15px;
+  overflow: hidden;
   color: #fff;
   -webkit-transition: -webkit-transform 0.5s ease-in;
   transition: -webkit-transform 0.5s ease-in;
@@ -116,8 +117,8 @@ html body .blogs-container a {
 }
 
 html body .blogs-container a:hover {
-  -webkit-transform: translate3d(5px, 5px, 10px);
-          transform: translate3d(5px, 5px, 10px);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 html body .blogs-container a .blog {

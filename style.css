@@ -192,27 +192,53 @@ html body .about-me .img-text {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
+  /*p {
+          width: 50%;
+          padding: 1.1rem;
+          color: #fff;
+          text-align: center;
+          font-size: 1.7rem;
+          line-height: 1.4;
+          font-family: "Montserrat", sans-serif;
+          a {
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+              color: #000;
+            }
+          }
+        }*/
 }
 
-html body .about-me .img-text p {
-  width: 50%;
-  padding: 1.1rem;
+html body .about-me .img-text .info {
   color: #fff;
-  text-align: center;
-  font-size: 1.7rem;
-  line-height: 1.4;
+  padding: 1rem;
   font-family: "Montserrat", sans-serif;
 }
 
-html body .about-me .img-text p a {
-  text-decoration: none;
-  color: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+html body .about-me .img-text .info ul {
+  list-style-type: none;
+  margin: 0;
 }
 
-html body .about-me .img-text p a:hover {
-  color: #000;
+html body .about-me .img-text .info ul li {
+  padding: 1.1rem;
+  font-size: 1.5rem;
+}
+
+html body .about-me .img-text .info ul #skills ul {
+  list-style-type: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 html body .about-me .contact {
@@ -321,6 +347,27 @@ html body .about-me .contact .wrapper ul li a:hover {
   }
 }
 
+@media (max-width: 780px) {
+  html body .about-me .img-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  html body .about-me .img-text .info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (max-width: 700px) {
   html body .landing h3 {
     font-size: 2.8rem;
@@ -378,8 +425,12 @@ html body .about-me .contact .wrapper ul li a:hover {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  html body .about-me .img-text p {
-    width: 80%;
+  html body .about-me .img-text .info {
+    padding: 0;
+  }
+  html body .about-me .img-text .info ul li {
+    font-size: 1.1rem;
+    padding: 0.5rem;
   }
   html body .about-me .contact .wrapper {
     display: -webkit-box;

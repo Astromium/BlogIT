@@ -68,6 +68,25 @@ html body .blog .content .wrapper {
   line-height: 2;
 }
 
+html body .blog .content .wrapper .img1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+}
+
+html body .blog .content .wrapper .img1 img {
+  width: 100%;
+  height: 100%;
+}
+
 html body .blog .content .wrapper ul li a {
   text-decoration: none;
   font-size: 1.5rem;
@@ -109,6 +128,7 @@ html body .blog .content .wrapper .img-container img {
   }
   html body .blog .content .wrapper ul {
     padding: 0.1rem;
+    list-style-type: none;
   }
   html body .blog .content .wrapper ul li {
     font-size: 1rem;

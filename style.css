@@ -94,6 +94,7 @@ html body .landing .icon #nav-icon {
   width: 25px;
   height: 45px;
   position: relative;
+  outline: none;
   cursor: pointer;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);

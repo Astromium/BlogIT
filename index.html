@@ -16,6 +16,17 @@
     <title>Blog</title>
   </head>
   <body>
+    <div class="drop-menu">
+      <ul>
+        <li><a data-scroll href="#about-me" id="abt-me">About Me</a></li>
+        <li><a data-scroll href="#contact" id="cont">Contact</a></li>
+        <li>
+          <a href="https://astromium.github.io/GitFolio/" target="_blank"
+            >Portfolio</a
+          >
+        </li>
+      </ul>
+    </div>
     <div class="landing">
       <ul>
         <li><a data-scroll href="#about-me" id="abt-me">About Me</a></li>
@@ -26,6 +37,14 @@
           >
         </li>
       </ul>
+      <div class="icon">
+        <div id="nav-icon">
+          <span class="span"></span>
+          <span class="span"></span>
+          <span class="span"></span>
+        </div>
+      </div>
+
       <h3 class="head-title">Welcome To <span id="blog-it">BlogIT</span></h3>
       <div class="content">
         <p class="head-txt">
@@ -190,5 +209,16 @@
       defer
       src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"
     ></script>
+    <script>
+      const hamburger = document.getElementById("nav-icon");
+      const drop = document.querySelector(".drop-menu");
+      const item1 = document.getElementById("abt-me");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        drop.classList.toggle("drop");
+        item1.classList.toggle("anim1");
+      });
+    </script>
   </body>
 </html>

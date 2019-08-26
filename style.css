@@ -17,6 +17,65 @@ html body {
   font-family: "Raleway", sans-serif;
 }
 
+html body .drop-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20vh;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .drop-menu ul {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+html body .drop-menu ul li {
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+html body .drop-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+html body .drop-menu ul li a:hover {
+  color: #8e44ad;
+}
+
+html body .drop-menu ul li a #abt-me.anim1 {
+  -webkit-animation: anim1 0.4s ease-in-out;
+          animation: anim1 0.4s ease-in-out;
+}
+
+html body .drop-menu.drop {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
 html body .landing {
   /*background: #00b285;*/
   background: linear-gradient(125deg, #27ae60, #8e44ad);
@@ -25,6 +84,71 @@ html body .landing {
   grid-gap: 1.5rem;
   min-height: 50vh;
   width: 100%;
+}
+
+html body .landing .icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+html body .landing .icon #nav-icon {
+  width: 25px;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: none;
+  pointer-events: none;
+}
+
+html body .landing .icon #nav-icon .span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+html body .landing .icon #nav-icon .span:nth-child(1) {
+  top: 0;
+}
+
+html body .landing .icon #nav-icon .span:nth-child(2) {
+  top: 10px;
+}
+
+html body .landing .icon #nav-icon .span:nth-child(3) {
+  top: 20px;
+}
+
+html body .landing .icon #nav-icon.open .span:nth-child(1) {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  background-color: #000;
+  top: 10px;
+}
+
+html body .landing .icon #nav-icon.open .span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+html body .landing .icon #nav-icon.open .span:nth-child(3) {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 10px;
+  background-color: #000;
 }
 
 html body .landing ul {
@@ -134,7 +258,7 @@ html body .blogs-container a .blog {
       -ms-flex-align: center;
           align-items: center;
   /*background: rgba(204, 204, 204, 0.336);*/
-  background: linear-gradient(125deg, #27ae60, #6c5ce7);
+  background: radial-gradient(#27ae60, #6c5ce7);
   -webkit-box-shadow: 0 1px 5px #000;
           box-shadow: 0 1px 5px #000;
   -webkit-transition: all 0.5 linear;
@@ -402,10 +526,16 @@ html body .about-me .contact .wrapper ul li a:hover {
 }
 
 @media (max-width: 530px) {
+  html body .landing .icon #nav-icon {
+    display: block;
+    pointer-events: all;
+  }
   html body .landing ul {
+    opacity: 0;
+    pointer-events: none;
     margin-left: 0.5rem;
   }
-  html body .landing ul ul a {
+  html body .landing ul li a {
     font-size: 1.1rem;
   }
   html body .landing h3 {
@@ -470,6 +600,32 @@ html body .about-me .contact .wrapper ul li a:hover {
   }
   html body .about-me .contact .wrapper ul li {
     padding: 0.7rem;
+  }
+}
+
+@-webkit-keyframes anim1 {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes anim1 {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

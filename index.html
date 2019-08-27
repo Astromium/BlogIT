@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- *_*_*_*_*_*_*-->
     <link
       href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
       rel="stylesheet"
@@ -201,6 +203,7 @@
               </a>
             </li>
           </ul>
+          <button id="share-btn">share</button>
         </div>
       </div>
     </div>
@@ -218,6 +221,26 @@
         hamburger.classList.toggle("open");
         drop.classList.toggle("drop");
         item1.classList.toggle("anim1");
+      });
+
+      const share = document.getElementById("share-btn");
+      share.addEventListener("click", () => {
+        if (navigator.share) {
+          navigator
+            .share({
+              title: "BlogIT",
+              text: "How is it going bros",
+              url: window.location.href
+            })
+            .then(() => {
+              console.log("thanks for sharing");
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        } else {
+          console.log("Web share is not supported");
+        }
       });
     </script>
   </body>

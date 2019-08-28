@@ -298,62 +298,135 @@ html body .about-me {
   background: linear-gradient(125deg, #6c5ce7, #27ae60);
 }
 
+html body .about-me .card {
+  width: 80%;
+  margin: 2rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  background: #005d9b93;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+html body .about-me .card .profile-right {
+  width: 100%;
+}
+
+html body .about-me .card .profile-image {
+  margin-bottom: 1rem;
+}
+
+html body .about-me .card .profile-image img {
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+html body .about-me .card .social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body .about-me .card .social-list .social-links {
+  padding: 1rem;
+  color: #5bcbf0;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+html body .about-me .card .social-list .social-links:hover {
+  opacity: 1;
+}
+
+html body .about-me .card .profile-name {
+  letter-spacing: 2px;
+  line-height: 1.4;
+  margin: 1.5rem 0;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+}
+
+html body .about-me .card .profile-name::after {
+  content: "";
+  height: 3px;
+  width: 100px;
+  background: #5bcbf0a1;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+html body .about-me .card .profile-position {
+  font-size: 1.5rem;
+  color: #5bcbf0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html body .about-me .card .profile-resume {
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+}
+
+html body .about-me .card .profile-resume::after {
+  content: "";
+  height: 3px;
+  width: 80px;
+  background: #5bcbf0a1;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+html body .about-me .card .skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+html body .about-me .card .skills-list li {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
+
 html body .about-me h2 {
   color: #fff;
   padding: 2rem;
   font-size: 2.2rem;
 }
 
-html body .about-me .img-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+html body .footer {
   width: 100%;
-  /*p {
-          width: 50%;
-          padding: 1.1rem;
-          color: #fff;
-          text-align: center;
-          font-size: 1.7rem;
-          line-height: 1.4;
-          font-family: "Montserrat", sans-serif;
-          a {
-            text-decoration: none;
-            color: #fff;
-            transition: all 0.5s ease-in-out;
-            &:hover {
-              color: #000;
-            }
-          }
-        }*/
-}
-
-html body .about-me .img-text .info {
-  color: #fff;
-  padding: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-
-html body .about-me .img-text .info ul {
-  list-style-type: none;
-  margin: 0;
-}
-
-html body .about-me .img-text .info ul li {
-  padding: 1.1rem;
-  font-size: 1.5rem;
-}
-
-html body .about-me .img-text .info ul #skills ul {
-  list-style-type: none;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,69 +436,10 @@ html body .about-me .img-text .info ul #skills ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-html body .about-me .contact {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-}
-
-html body .about-me .contact .wrapper {
-  padding: 1.2rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 1.5rem;
-}
-
-html body .about-me .contact .wrapper p {
-  padding: 1.5rem;
-  margin: auto;
   color: #fff;
-  font-size: 1.9rem;
-  width: 70%;
-  text-align: center;
-}
-
-html body .about-me .contact .wrapper p a {
-  text-decoration: none;
-  color: #8e44ad;
-}
-
-html body .about-me .contact .wrapper h3 {
-  color: #fff;
-  margin-top: 1.3rem;
-  padding: 1.1rem;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-html body .about-me .contact .wrapper ul {
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-}
-
-html body .about-me .contact .wrapper ul li {
   padding: 2rem;
-}
-
-html body .about-me .contact .wrapper ul li a {
-  text-decoration: none;
-  color: #fff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-html body .about-me .contact .wrapper ul li a:hover {
-  color: #000;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
@@ -453,42 +467,6 @@ html body .about-me .contact .wrapper ul li a:hover {
     font-size: 1.2rem;
     width: 100%;
     padding: 0.2rem;
-  }
-  html body .about-me .img-text p {
-    font-size: 1.4rem;
-    padding: 0.7rem;
-  }
-  html body .about-me .img-text img {
-    height: 240px;
-    width: 240px;
-  }
-  html body .about-me .contact .wrapper p {
-    font-size: 1.4rem;
-    padding: 1rem;
-  }
-  html body .about-me .contact .wrapper h3 {
-    font-size: 1.7rem;
-  }
-}
-
-@media (max-width: 780px) {
-  html body .about-me .img-text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  html body .about-me .img-text .info {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -549,57 +527,6 @@ html body .about-me .contact .wrapper ul li a:hover {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  html body .about-me .img-text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  html body .about-me .img-text .info {
-    padding: 0;
-  }
-  html body .about-me .img-text .info ul li {
-    font-size: 1.1rem;
-    padding: 0.5rem;
-  }
-  html body .about-me .contact .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  html body .about-me .contact .wrapper p {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    margin: 0;
-    width: 90%;
-  }
-  html body .about-me .contact .wrapper h3 {
-    font-size: 1.3rem;
-    padding: 0.5rem;
-  }
-  html body .about-me .contact .wrapper ul {
-    margin: 0;
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  html body .about-me .contact .wrapper ul li {
-    padding: 0.7rem;
-  }
 }
 
 @-webkit-keyframes anim1 {
@@ -625,6 +552,15 @@ html body .about-me .contact .wrapper ul li a:hover {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     opacity: 1;
+  }
+}
+
+@media (max-width: 430px) {
+  html body .about-me .card {
+    width: 90%;
+  }
+  html body .about-me .card .skills-list li {
+    font-size: 0.9rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

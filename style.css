@@ -257,7 +257,7 @@ html body .blogs-container a .blog {
       -ms-flex-align: center;
           align-items: center;
   /*background: rgba(204, 204, 204, 0.336);*/
-  background: radial-gradient(#27ae60, #6c5ce7);
+  background: linear-gradient(125deg, #005d9b, #031627f5);
   -webkit-box-shadow: 0 1px 5px #000;
           box-shadow: 0 1px 5px #000;
   -webkit-transition: all 0.5 linear;
@@ -300,6 +300,7 @@ html body .about-me {
 
 html body .about-me .card {
   width: 80%;
+  border-radius: 15px;
   margin: 2rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -385,6 +386,9 @@ html body .about-me .card .profile-position {
 
 html body .about-me .card .profile-resume {
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.8;
   width: 100%;
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -526,32 +530,6 @@ html body .footer {
   html body .blogs-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-  }
-}
-
-@-webkit-keyframes anim1 {
-  0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes anim1 {
-  0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 1;
   }
 }
 

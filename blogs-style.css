@@ -26,6 +26,8 @@ html body .blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   border-bottom: 3px solid #ccc;
   margin-bottom: 2rem;
@@ -51,10 +53,14 @@ html body .blog .img {
       -ms-flex-align: center;
           align-items: center;
   height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 html body .blog .img img {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
 }
 
@@ -66,6 +72,10 @@ html body .blog .content .wrapper {
   width: 90%;
   font-size: 1.2rem;
   line-height: 2;
+}
+
+html body .blog .content .wrapper .sharethis-inline-share-buttons {
+  height: 100px;
 }
 
 html body .blog .content .wrapper .img1 {
